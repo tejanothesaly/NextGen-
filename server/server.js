@@ -7,10 +7,12 @@ const app = express();
 const port = 5000;
  
 app.use(bodyParser.json());
+
 app.use(cors({
-  origin: 'https://next-gen-client.vercel.app/',
-  credentials: true, 
+  origin: /\.vercel\.app$/,
+  credentials: true,
 }));
+
 
 app.post('/fetch-student-data', async (req, res) => {
   const { username, password, numberOfColumns } = req.body;
