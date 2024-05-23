@@ -7,8 +7,11 @@ const app = express();
 const port = 5000;
  
 app.use(bodyParser.json());
-app.use(cors());
- 
+app.use(cors({
+  origin: 'https://next-gen-client-88gvk9ee6-thesalytejanos-projects.vercel.app/',
+  credentials: true, 
+}));
+
 app.post('/fetch-student-data', async (req, res) => {
   const { username, password, numberOfColumns } = req.body;
  
