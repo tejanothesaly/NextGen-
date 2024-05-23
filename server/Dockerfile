@@ -1,0 +1,1 @@
+FROM ghcr.io/puppeteer/puppeteer:22.8.0
