@@ -29,7 +29,14 @@ app.post('/fetch-student-data', async (req, res) => {
 });
  
 const runPuppeteer = async (username, password, numberOfColumns) => {
-  const browser = await puppeteer.launch({ headless: true });
+  const browser = await puppeteer.launch({
+    headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--single-process", "--no-zygote",],
+    executablePath: 
+      process.env.NODE_ENV === "production"
+        ? process.env.PUPPETEER_EXECUTABLE_PATH
+        : puppeteer.executablePath(),
+  });
   const page = await browser.newPage();
   await page.goto('https://cituweb.pinnacle.com.ph/aims/students/');
   await page.waitForSelector('.aims-textfield input[name="password"]');
