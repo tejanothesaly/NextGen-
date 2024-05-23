@@ -1,0 +1,384 @@
+.form-container {
+  width: 29%; /* Adjust the width as needed */
+  margin: auto; /* Center the form horizontally */
+  padding: 20px;
+  border-radius: 5px; /* Rounded corners */
+  background-color: rgba(60, 56, 43, 0.8); /* Gray background color with 80% opacity */
+  box-shadow: 0 5px 15px 7px rgb(24, 24, 24), 5px 0 12px 3px rgb(62, 62, 62); /* Darker black shadow */
+  font-family: 'Calibri', sans-serif;
+}
+ 
+/* Styling for form elements -  TEXTBOX*/
+.form-container input[type="text"],
+.form-container input[type="password"]{
+  width: calc(100% - 20px); /* Adjust width for the inputs  */
+  margin-bottom: 10px; /* Spacing between elements */
+  padding: 10px; /* Padding for inputs and buttons */
+  border: none; /* Remove default borders */
+  border-radius: 0px; /* Rounded corners for inputs and buttons */
+  height: 10px;
+}
+.form-container input[type="text"]::placeholder,
+.form-container input[type="password"]::placeholder {
+  color: #787878; /* Color for the placeholder text */
+  font-family: Calibri, sans-serif;
+}
+ 
+/* Styling for text color - USERNAME,  PASSWORD LABEL*/
+.form-container label,
+.form-container p {
+  color: white; /* Set text color to white */
+  font-size: 14.5px;
+}
+ 
+/* Styling for clickable button - LOGIN BUTTON*/
+.form-container button {
+  cursor: pointer; /* Show pointer cursor on hover */
+  background-color: #FCCA00; /* Darker background color for the button */
+  color: black; /* Text color for the button */
+  width: 20%; /* Adjust width for the inputs and buttons */
+  height: 30px;
+  margin-bottom: 10px; /* Spacing between elements */
+  padding: 10px; /* Padding for inputs and buttons */
+  border: none; /* Remove default borders */
+  border-radius: 0px; /* Rounded corners for inputs and buttons */
+  font-family: 'Calibri', sans-serif;
+  display: flex; /* Use flexbox */
+  justify-content: center; /* Horizontally center the content */
+  align-items: center; /* Vertically center the content */
+  transition: background-position 0.3s; /* Define the transition duration */
+  background-size: 200% 100%; /* Adjust background size for transition effect */
+  background-image: linear-gradient(to right, #FCCA00 50%, #ffe993 50%); /* Create gradient for transition effect */
+}
+ 
+/* Hover effect for button */
+.form-container button:hover {
+  background-color: #ffe993; /* Darker background color on hover */
+  background-position: -100% 0; /* Move background from left to right */
+}
+ 
+ 
+.title {
+    text-align: center;
+    font-size: 28px;
+  }
+ 
+  .subtitle {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 17px;
+  }
+ 
+  .line {
+    width: 100%;
+    margin: auto;
+    margin-bottom: 20px;
+    border-color: white;
+  }
+ 
+/*Account page with Navbar move px to top*/
+.accountspage{
+  margin-top: -4px; /* Adjust as needed to move the content down */
+  top: 85px; /* Adjust as needed */
+  left: 0;
+  right: 0;
+  padding: 50px;
+}
+ 
+/* Navbar */
+.navbar {
+  list-style-type: none;
+  margin: 0px;
+  padding: none;
+  border: none;
+  /* background-color: #FFDE35; Background color for the navbar */
+  /* border: 1px solid black; Border around the navbar */
+  display: flex; /* Use flexbox for flexible layout */
+  flex-wrap: wrap; /* Allow items to wrap to next line if needed */
+  justify-content: center;
+  gap: 7px;
+ 
+}
+ 
+.navbar li {
+  display: inline-block;
+}
+ 
+.navbar li button {
+  display: inline-block;
+  padding: 3px 15px; /* Adjust padding as needed */
+  margin-left: 1.5px;
+  margin-right: 1.5px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  background-color: #89343B; /* Background color for the buttons */
+  color: white; /* Text color for the buttons */
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.1s; /* Smooth transition for hover effect */
+  font-size: 13px;
+}
+ 
+.navbar li button:hover {
+  background-color: #FCCA00; /* Darker background color when hovered */
+  border: none;
+  color: black;
+}
+ 
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column; /* Arrange buttons vertically */
+    align-items: center; /* Center items horizontally */
+  }
+ 
+  .navbar li {
+    width: 100%; /* Make buttons fill the entire width */
+    text-align: center; /* Center text within buttons */
+    margin: 2px 0; /* Adjust margin for vertical layout */
+  }
+}
+ 
+/* Style for the Accounts button */
+.navbar li button.accounts {
+  background-color: #FCCA00; /* Darker background color when hovered */
+  color: black;
+  border: none;
+}
+ 
+ 
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: large;
+}
+ 
+.data-table th, .data-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+  font-size: large;
+}
+ 
+.data-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  font-size: large;
+}
+ 
+.data-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+ 
+.data-table tr:hover {
+  background-color: #ddd;
+}
+ 
+ 
+/*PROCEED TO PAYMENT BTN*/
+/* Styles for the overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it overlays above other content */
+}
+ 
+/* Styles for the pop-up container */
+.popup {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 500px;
+ 
+  text-align: center;
+ 
+}
+ 
+.popup p{
+  font-size: 25px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+ 
+}
+ 
+.popup input {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+ 
+.popup button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+ 
+.popup .proceed-btn {
+  background-color: #4CAF50; /* Green */
+  color: white;
+  margin-right: 30px; /* Adjust the margin between buttons */
+}
+ 
+.popup .cancel-btn {
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-left: 30px; /* Adjust the margin between buttons */
+}
+ 
+.popup .proceed-btn:hover {
+  background-image: linear-gradient(to bottom, #4CAF50, #257146); /* Green gradient */
+}
+ 
+.popup .cancel-btn:hover {
+  background-image: linear-gradient(to bottom, #f44336, #a94c4c); /* Red gradient */
+}
+ 
+/* Show the overlay when it is active */
+.overlay.active {
+  display: flex;
+}
+ 
+.proceed-payment-btn {
+  background-color: #0080FF;
+  box-shadow: -2px -2px 0px 0px rgb(255, 255, 255);
+  font-weight: 550;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding-top: 50px;
+  padding: 8px 11px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.1s ease;
+}
+ 
+.proceed-payment-btn:hover {
+  background: linear-gradient(to bottom, #0080FF, #00FBFF);
+}
+ 
+.data-table-array {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px;
+  font-size: 10px;
+  font-family: Arial, sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+ 
+.data-table-array thead tr {
+  background: linear-gradient(#8a353c, #f9f5e3);
+  color: #000000;
+}
+ 
+.data-table-array th,
+.data-table-array td {
+  padding: 12px 15px;
+  border: 1px solid #201e1e;
+  text-align: center;
+}
+ 
+.data-table-array tbody tr {
+  border-bottom: 1px solid #dddddd;
+  background-color: #c8dbcb;
+ 
+}
+ 
+ 
+.data-table-array tbody td.style {
+  background-color: #c8dbcb;
+}
+
+.payments-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  text-align: left;
+}
+
+.payments-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.payments-table th{
+  text-align: center;
+}
+
+
+.payments-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payments-table th, .payments-table td {
+  border: 1px solid black;
+  padding: 8px;
+}
+
+.payments-table th {
+  background: linear-gradient(#8a353c, #f9f5e3);
+  color: #333;
+}
+
+.payments-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.action-button-cont{
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  display: flex;
+
+}
+.button-pay-now{
+  background-color: #0080FF;
+  box-shadow: -2px -2px 0px 0px rgb(255, 255, 255);
+  font-weight: 550;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding-top: 50px;
+  padding: 8px 11px;
+  margin-left: 5px;
+  cursor: pointer;
+  font-size: 10px;
+  transition: background-color 0.1s ease;
+}
+
+.button-delete-now{
+  background-color: #e24944;
+  box-shadow: -2px -2px 0px 0px rgb(255, 255, 255);
+  font-weight: 550;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding-top: 50px;
+  padding: 8px 11px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 10px;
+  transition: background-color 0.1s ease;
+}
+
