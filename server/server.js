@@ -31,7 +31,6 @@ app.post('/fetch-student-data', async (req, res) => {
 const runPuppeteer = async (username, password, numberOfColumns) => {
   const browser = await puppeteer.launch({
     headless: true,
-    executablePath: '/path/to/chrome',
   });
   const page = await browser.newPage();
   await page.goto('https://cituweb.pinnacle.com.ph/aims/students/');

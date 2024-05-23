@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server",
+    "start": "node server.js",
     "dev": "nodemon server",
     "postinstall": "npx puppeteer install chrome"
   },
@@ -18,7 +18,8 @@
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "firebase-admin": "^12.1.0",
-    "puppeteer": "^22.8.0"
+    "puppeteer": "^22.8.0",
+    "axios": "^0.21.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.0"
