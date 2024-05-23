@@ -1,0 +1,46 @@
+body {
+    background: linear-gradient(to bottom, white, #DDC355);
+    height: 100vh; /* Set height to 100% of viewport height */
+    background-attachment: fixed; /* Set background attachment to fixed */
+    overflow-x: hidden; /* Hides horizontal scrollbar */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+.logo {
+  position: fixed;
+  bottom: 20px;
+  right: -10px;
+  height: 680px;
+  opacity: 0.1; /* Set opacity to 10% */
+  z-index: -5;
+}
+
+.banner {
+  margin: 0px;
+  padding: 0px;
+}
+
+.footer {
+  text-align: center;
+  width: 100%;
+  font-size: 14px;
+  color: #000;
+  padding-bottom: 10px; /* Add space at the bottom */
+
+}
+
+.dashed-line {
+  border: none;
+  border-top: 1.5px dashed #000; /* Dotted line style */
+  margin: 10px auto; /* Adjust margin as needed */
+  width: 100%; /* Adjust width as needed */
+}
+
+.footer p {
+  margin: 0px 0;
+}
+
+.footer a {
+  color: #0080FF; /* Color for the email link */
+  text-decoration: none; /* Remove underline */
+}
