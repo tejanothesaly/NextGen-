@@ -14,11 +14,14 @@ app.use(cors({
 
 app.post('/fetch-student-data', async (req, res) => {
   const { username, password, numberOfColumns } = req.body;
- 
+  console.log('Received login request for username:', username);
+
   try {
     const { studentData, titleList, balList, tempDiv } = await runPuppeteer(username, password, numberOfColumns);
+    console.log('Puppeteer data:', { studentData, titleList, balList, tempDiv });
     res.send({ studentData, titleList, balList,tempDiv  });
   } catch (error) {
+    console.error('Error in login request:', error.message);
     res.status(400).send({ error: error.message });
   }
 });

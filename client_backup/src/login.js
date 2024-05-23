@@ -23,8 +23,9 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
+      console.log('Sending login request...');
       const response = await axios.post('https://nextgen-2g2m.onrender.com/fetch-student-data', { username, password, numberOfColumns: 9 });
-      console.log(response.data);
+      console.log('Login request successful:',response.data);
   
       if (response.data && response.data.studentData.length > 0) {
         setStudentData(response.data.studentData);
