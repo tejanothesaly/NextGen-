@@ -8,7 +8,7 @@ const port = 5000;
  
 app.use(bodyParser.json());
 app.use(cors({
-  origin: 'https://next-gen-client-88gvk9ee6-thesalytejanos-projects.vercel.app/',
+  origin: 'https://next-gen-client.vercel.app/',
   credentials: true, 
 }));
 

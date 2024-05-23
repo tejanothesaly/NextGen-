@@ -23,7 +23,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('https://next-gen-server-gules.vercel.app/fetch-student-data', { username, password, numberOfColumns: 9 });
+      const response = await axios.post('https://nextgen-2g2m.onrender.com/fetch-student-data', { username, password, numberOfColumns: 9 });
       console.log(response.data);
   
       if (response.data && response.data.studentData.length > 0) {
